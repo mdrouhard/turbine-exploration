@@ -89,6 +89,22 @@ ModelImporter:
     4300026: default_MeshPart13
     4300028: default_MeshPart14
     4300030: default_MeshPart15
+    6400000: default_MeshPart0
+    6400002: default_MeshPart1
+    6400004: default_MeshPart10
+    6400006: default_MeshPart11
+    6400008: default_MeshPart12
+    6400010: default_MeshPart13
+    6400012: default_MeshPart14
+    6400014: default_MeshPart15
+    6400016: default_MeshPart2
+    6400018: default_MeshPart3
+    6400020: default_MeshPart4
+    6400022: default_MeshPart5
+    6400024: default_MeshPart6
+    6400026: default_MeshPart7
+    6400028: default_MeshPart8
+    6400030: default_MeshPart9
   materials:
     importMaterials: 1
     materialName: 0
@@ -113,8 +129,8 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
-    addColliders: 0
+    meshCompression: 2
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

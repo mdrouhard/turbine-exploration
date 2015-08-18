@@ -88,6 +88,7 @@ public class PlayerController : MonoBehaviour {
 	private Rigidbody m_RigidBody;
 	private float m_YRotation;
 	private bool m_Braking;
+	private float m_BrakeVelocity;
 	
 	
 	public Vector3 Velocity
@@ -113,6 +114,7 @@ public class PlayerController : MonoBehaviour {
 		//mouseLook.Init (transform, cam.centerEyeAnchor);
 		mouseLook.Init (transform, cam.transform);
 		m_Braking = false;
+		m_BrakeVelocity = (100f - advancedSettings.slowDownRate)/100f;
 	}
 	
 	// Update is called once per frame
@@ -132,8 +134,8 @@ public class PlayerController : MonoBehaviour {
 		
 		// if braking, only brake
 		if (m_Braking) {
-			m_RigidBody.velocity = m_RigidBody.velocity * 0.9f;
-			m_RigidBody.angularVelocity = m_RigidBody.angularVelocity * 0.9f;
+			m_RigidBody.velocity = m_RigidBody.velocity * m_BrakeVelocity;
+			m_RigidBody.angularVelocity = m_RigidBody.angularVelocity * m_BrakeVelocity;
 			// else if a move is desired, apply appropriate force
 		} else if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) /*&& (advancedSettings.airControl || m_IsGrounded)*/)
 		{
